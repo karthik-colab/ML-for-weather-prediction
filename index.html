@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="weather-logo.jpg" alt="Weather Logo" class="logo">
+        <div class="prediction-box">
+            <div class="title-container">
+                <img src="clear.png" alt="Sunny" class="sunny-icon">
+                <h1>Temperature Predictor</h1>
+            </div>
+            <input type="text" id="location" placeholder="Enter location" class="input-box">
+            <input type="date" id="date" class="input-box">
+            <button id="predict-btn" class="predict-btn">Predict</button>
+            <div id="result" class="result"></div>
+        </div>
+        <div class="forecast">
+            <h2>7-Day Forecast for <span id="forecast-location"></span></h2>
+            <div class="forecast-boxes">
+                <div class="day-box">
+                    <p>Today</p>
+                    <img src="clear.png" alt="Clear">
+                    <p>25°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Tomorrow</p>
+                    <img src="cloude.png" alt="Cloudy">
+                    <p>22°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 3</p>
+                    <img src="rain.png" alt="Rain">
+                    <p>20°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 4</p>
+                    <img src="drizzel.png" alt="Drizzle">
+                    <p>18°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 5</p>
+                    <img src="mist.png" alt="Mist">
+                    <p>19°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 6</p>
+                    <img src="clear.png" alt="Clear">
+                    <p>26°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 7</p>
+                    <img src="cloude.png" alt="Cloudy">
+                    <p>23°C</p>
+                </div>
+            </div>
+        </div>
+        <div class="recommendations">
+            <h2>Recommendations</h2>
+            <p>Based on the weather prediction, it's a good day for outdoor activities. Remember to stay hydrated and wear sunscreen!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

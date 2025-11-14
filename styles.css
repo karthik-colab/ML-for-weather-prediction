@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('weather-ui.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: auto;
+}
+
+.prediction-box {
+    margin-top: 120px;
+    background: linear-gradient(to bottom, #2a0254, #033e7e);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.title-container h1 {
+    margin: 0 10px;
+}
+
+.sunny-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.input-box {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.predict-btn {
+    background: #027789;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.predict-btn:hover {
+    background: #039992;
+    border-radius: 30px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+.highlight {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.forecast {
+    background: linear-gradient(to bottom, #2b0360, #03367d);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.forecast h2 {
+    margin-bottom: 10px;
+}
+
+.forecast-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.day-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 5px;
+    min-width: 100px;
+}
+
+.day-box img {
+    width: 40px;
+    height: 40px;
+}
+
+.recommendations {
+    background: rgb(54, 2, 102);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recommendations h2 {
+    margin-bottom: 10px;
+}
+
+.recommendations p {
+    font-size: 16px;
+}
