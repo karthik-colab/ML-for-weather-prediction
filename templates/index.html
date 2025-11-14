@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Predictor</title>
+
+    <!-- ✅ CSS must be loaded using url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- ✅ FIX: Flask static path for image -->
+        <img src="{{ url_for('static', filename='weather-logo.jpg') }}" alt="Weather Logo" class="logo">
+
+        <div class="prediction-box">
+            <div class="title-container">
+                <!-- ✅ FIX: Flask static path -->
+                <img src="{{ url_for('static', filename='clear.png') }}" alt="Sunny" class="sunny-icon">
+                <h1>Temperature Predictor</h1>
+            </div>
+
+            <input type="text" id="location" placeholder="Enter location" class="input-box">
+            <input type="date" id="date" class="input-box">
+            <button id="predict-btn" class="predict-btn">Predict</button>
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="forecast">
+            <h2>7-Day Forecast for <span id="forecast-location"></span></h2>
+            <div class="forecast-boxes">
+
+                <!-- ✅ FIX: every image path uses url_for -->
+                <div class="day-box">
+                    <p>Today</p>
+                    <img src="{{ url_for('static', filename='clear.png') }}" alt="Clear">
+                    <p>25°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Tomorrow</p>
+                    <img src="{{ url_for('static', filename='cloude.png') }}" alt="Cloudy">
+                    <p>22°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 3</p>
+                    <img src="{{ url_for('static', filename='rain.png') }}" alt="Rain">
+                    <p>20°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 4</p>
+                    <img src="{{ url_for('static', filename='drizzel.png') }}" alt="Drizzle">
+                    <p>18°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 5</p>
+                    <img src="{{ url_for('static', filename='mist.png') }}" alt="Mist">
+                    <p>19°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 6</p>
+                    <img src="{{ url_for('static', filename='clear.png') }}" alt="Clear">
+                    <p>26°C</p>
+                </div>
+                <div class="day-box">
+                    <p>Day 7</p>
+                    <img src="{{ url_for('static', filename='cloude.png') }}" alt="Cloudy">
+                    <p>23°C</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h2>Recommendations</h2>
+            <p>Based on the weather prediction, it's a good day for outdoor activities. Remember to stay hydrated and wear sunscreen!</p>
+        </div>
+    </div>
+
+    <!-- ✅ FIX: JS loaded correctly via Flask -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
